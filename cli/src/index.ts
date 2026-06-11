@@ -6,11 +6,13 @@ import { registerBookingCommand } from './commands/booking.js';
 import { registerOrderCommand } from './commands/order.js';
 import { registerStatsCommand } from './commands/stats.js';
 import { registerProfileCommand } from './commands/profile.js';
+import { registerOverviewCommand } from './commands/overview.js';
 import { chooseMainAction } from './prompts/menu.js';
 
 const program = new Command();
 program.name('photo-cli').description('摄影约拍平台 CLI 发布工具').version('1.0.0');
 registerAuthCommands(program);
+registerOverviewCommand(program);
 registerScheduleCommand(program);
 registerBookingCommand(program);
 registerOrderCommand(program);

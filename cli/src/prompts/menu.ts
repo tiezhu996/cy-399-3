@@ -3,6 +3,7 @@ import inquirer from 'inquirer';
 export async function chooseMainAction() {
   const answer = await inquirer.prompt<{ action: string }>([
     { type: 'list', name: 'action', message: '请选择操作', choices: [
+      { name: '📋 开工概览', value: 'overview' },
       { name: '登录', value: 'login' },
       { name: '注册', value: 'register' },
       { name: '发布约拍档期', value: 'schedule' },
